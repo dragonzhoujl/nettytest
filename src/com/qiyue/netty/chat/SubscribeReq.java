@@ -16,6 +16,9 @@ public class SubscribeReq implements Serializable{
 	
 	private String address;
 	
+	public void test(){
+		System.out.println(" sssss");
+	}
 	
 
 	public int getSubSeqID() {
