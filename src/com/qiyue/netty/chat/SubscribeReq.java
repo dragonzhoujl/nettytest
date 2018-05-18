@@ -18,6 +18,7 @@ public class SubscribeReq implements Serializable{
 	
 	public void test(){
 		System.out.println(" sssss");
+		System.out.println("test pull");
 	}
 	
 
