@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="nettylearn">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../eclipse/jee-oxygen/Eclipse.app/Contents/Eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="9"/>
+    <property name="source" value="9"/>
+    <path id="Maven Dependencies.libraryclasspath">
+        <pathelement location="../../.m2/repository/org/jibx/jibx-tools/1.3.1/jibx-tools-1.3.1.jar"/>
+        <pathelement location="../../.m2/repository/org/jibx/jibx-schema/1.3.1/jibx-schema-1.3.1.jar"/>
+        <pathelement location="../../.m2/repository/org/jibx/jibx-bind/1.3.1/jibx-bind-1.3.1.jar"/>
+        <pathelement location="../../.m2/repository/org/jibx/jibx-run/1.3.1/jibx-run-1.3.1.jar"/>
+        <pathelement location="../../.m2/repository/joda-time/joda-time/2.9.5/joda-time-2.9.5.jar"/>
+        <pathelement location="../../.m2/repository/xpp3/xpp3/1.1.3.4.O/xpp3-1.1.3.4.O.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/bcel/bcel/6.0/bcel-6.0.jar"/>
+        <pathelement location="../../.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/ant/ant/1.8.4/ant-1.8.4.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/ant/ant-launcher/1.8.4/ant-launcher-1.8.4.jar"/>
+        <pathelement location="../../.m2/repository/com/thoughtworks/qdox/qdox/1.12.1/qdox-1.12.1.jar"/>
+        <pathelement location="../../.m2/repository/org/jibx/jibx-extras/1.3.1/jibx-extras-1.3.1.jar"/>
+        <pathelement location="../../.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"/>
+        <pathelement location="../../.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar"/>
+        <pathelement location="../../.m2/repository/org/jdom/jdom/1.1.3/jdom-1.1.3.jar"/>
+        <pathelement location="../../.m2/repository/org/jibx/config/3rdparty/org/eclipse/org.eclipse.core.contenttype/3.4.100.v20110423-0524/org.eclipse.core.contenttype-3.4.100.v20110423-0524.jar"/>
+        <pathelement location="../../.m2/repository/org/jibx/config/3rdparty/org/eclipse/org.eclipse.core.jobs/3.5.100.v20110404/org.eclipse.core.jobs-3.5.100.v20110404.jar"/>
+        <pathelement location="../../.m2/repository/org/jibx/config/3rdparty/org/eclipse/org.eclipse.core.resources/3.7.100.v20110510-0712/org.eclipse.core.resources-3.7.100.v20110510-0712.jar"/>
+        <pathelement location="../../.m2/repository/org/jibx/config/3rdparty/org/eclipse/org.eclipse.core.runtime/3.7.0.v20110110/org.eclipse.core.runtime-3.7.0.v20110110.jar"/>
+        <pathelement location="../../.m2/repository/org/jibx/config/3rdparty/org/eclipse/org.eclipse.equinox.common/3.6.0.v20110523/org.eclipse.equinox.common-3.6.0.v20110523.jar"/>
+        <pathelement location="../../.m2/repository/org/jibx/config/3rdparty/org/eclipse/org.eclipse.equinox.preferences/3.4.0.v20110502/org.eclipse.equinox.preferences-3.4.0.v20110502.jar"/>
+        <pathelement location="../../.m2/repository/org/jibx/config/3rdparty/org/eclipse/org.eclipse.jdt.core/3.7.0.v_B61/org.eclipse.jdt.core-3.7.0.v_B61.jar"/>
+        <pathelement location="../../.m2/repository/org/jibx/config/3rdparty/org/eclipse/org.eclipse.osgi/3.7.0.v20110613/org.eclipse.osgi-3.7.0.v20110613.jar"/>
+        <pathelement location="../../.m2/repository/org/jibx/config/3rdparty/org/eclipse/org.eclipse.text/3.5.100.v20110505-0800/org.eclipse.text-3.5.100.v20110505-0800.jar"/>
+    </path>
+    <path id="nettylearn.classpath">
+        <pathelement location="target/classes"/>
+        <pathelement location="lib/netty-all-5.0.0.Alpha2.jar"/>
+        <pathelement location="../../Downloads/activation.jar"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.TimeServer.classpath">
+        <path refid="nettylearn.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.TimeClient.classpath">
+        <path refid="nettylearn.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.SubReqServer.classpath">
+        <path refid="nettylearn.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.SubReqClient.classpath">
+        <path refid="nettylearn.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.HttpFileServer.classpath">
+        <path refid="nettylearn.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="nettylearn.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="TimeServer">
+        <java classname="com.qiyue.netty.chat.TimeServer" failonerror="true" fork="yes">
+            <classpath refid="run.TimeServer.classpath"/>
+        </java>
+    </target>
+    <target name="TimeClient">
+        <java classname="com.qiyue.netty.chat.TimeClient" failonerror="true" fork="yes">
+            <classpath refid="run.TimeClient.classpath"/>
+        </java>
+    </target>
+    <target name="SubReqServer">
+        <java classname="com.qiyue.netty.chat.SubReqServer" failonerror="true" fork="yes">
+            <classpath refid="run.SubReqServer.classpath"/>
+        </java>
+    </target>
+    <target name="SubReqClient">
+        <java classname="com.qiyue.netty.chat.SubReqClient" failonerror="true" fork="yes">
+            <classpath refid="run.SubReqClient.classpath"/>
+        </java>
+    </target>
+    <target name="HttpFileServer">
+        <java classname="com.qiyue.netty.chat.HttpFileServer" failonerror="true" fork="yes">
+            <classpath refid="run.HttpFileServer.classpath"/>
+        </java>
+    </target>
+     <target name="bindgen">
+     	<echo message="Running Bindgen tool"></echo>
+     	<java classpathref="classpath" fork="true" failonerror="true"
+     		classname="org.jibx.binding.generator.BindGen">
+     		<arg value="-s"/>
+     		<arg value="${basedir}/src/com/qiyue/netty/order"/>
+     		<arg value="com.qiyue.netty.order"/>
+     		
+     	</java>
+     </target>
+</project>
